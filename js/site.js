@@ -31,13 +31,13 @@ function displayFizzBuzz(fizz, buzz, numberArray) {
 
   for (i = 0; i < numberArray.length; i++) {
     if (numberArray[i] % fizz == 0 && numberArray[i] % buzz == 0) {
-      results += `<div class="col border py-3 bg-warning">FizzBuzz</div>`;
+      results += `<div class="col-12 border py-3 bg-warning">FizzBuzz</div>`;
     } else if (numberArray[i] % fizz == 0) {
-      results += `<div class="col border py-3 bg-secondary">Fizz</div>`;
+      results += `<div class="col-12 border py-3 bg-secondary">Fizz</div>`;
     } else if (numberArray[i] % buzz == 0) {
-      results += `<div class="col border py-3 bg-info">Buzz</div>`;
+      results += `<div class="col-12 border py-3 bg-info">Buzz</div>`;
     } else {
-      results += `<div class="col border py-3">${numberArray[i]}</div>`;
+      results += `<div class="col-12 border py-3">${numberArray[i]}</div>`;
     }
   }
 
