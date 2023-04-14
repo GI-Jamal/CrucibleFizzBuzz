@@ -1,6 +1,6 @@
 function getValues() {
-  let fizzValue = parseFloat(document.getElementById("fizz").value);
-  let buzzValue = parseFloat(document.getElementById("buzz").value);
+  let fizzValue = parseInt(document.getElementById("fizz").value);
+  let buzzValue = parseInt(document.getElementById("buzz").value);
   let stopValue = parseInt(document.getElementById("stopNumber").value);
 
   if (isNaN(fizzValue) || isNaN(buzzValue) || isNaN(stopValue) || stopValue > 5000) {
