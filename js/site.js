@@ -3,7 +3,7 @@ function getValues() {
   let buzzValue = parseFloat(document.getElementById("buzz").value);
   let stopValue = parseInt(document.getElementById("stopNumber").value);
 
-  if (isNaN(fizzValue) || isNaN(buzzValue) || isNaN(stopValue)) {
+  if (isNaN(fizzValue) || isNaN(buzzValue) || isNaN(stopValue) || stopValue > 5000) {
     Swal.fire({
       icon: "error",
       title: "Oops!",
