@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Fizz Buzz: A CODING CHALLENGE by Jamal Gibson</title>
+    <title>Bingo Bango: A Coding Challenge by Jamal Gibson</title>
 
     <!-- Boostrap CSS -->
     <link
@@ -36,30 +36,32 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/hovercard.css" />
-    <link rel="stylesheet" href="/css/blogCard.css" />
-    <link rel="stylesheet" href="/css/site.css" />
-
     <!-- Prism CSS -->
     <link rel="stylesheet" href="/css/prism.css" />
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/site.css" />
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
-    <!-- TODO: change this from CF default favicon, replacement file name MUST be favicon.ico -->
   </head>
   <body>
     <!-- Header Banner -->
     <header id="home">
-      <!-- Navigation Bar -->
-      <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+      <!-- Mobile Navigation Bar -->
+      <nav
+        class="navbar navbar-expand-lg fixed-top shadow-lg d-sm-none"
+        data-bs-theme="dark"
+        id="mainNav"
+      >
         <div class="container-xxl">
-          <a class="navbar-brand" href="/index.html">
-            <img src="/img/Jamal Name Logo White.png" height="50" />
-            Fizz Buzz
-            <!--  TODO: play around with height of image with the height attribute -->
+          <a
+            class="navbar-brand border-top border-bottom border-white"
+            href="/index.html"
+          >
+            <img src="/img/JG Logo White.svg" class="img-fluid brandImaging" />
+            <span id="appName"> Bingo Bango</span>
           </a>
-          <!-- TODO: customize mobile menu button, and complete navbar -->
           <button
             class="navbar-toggler"
             type="button"
@@ -68,8 +70,9 @@
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            id="mobileNavToggler"
           >
-            <span class="navbar-toggler-jg">
+            <span class="navbar-toggle-icon">
               <i class="bi bi-list"></i>
             </span>
           </button>
@@ -87,48 +90,144 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://github.com/my-profile"
+                <a
+                  class="nav-link"
+                  href="https://github.com/GI-Jamal/CrucibleTacoCat"
+                  target="_blank"
                   >The Repo</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a
+                  class="nav-link"
+                  href="https://jamalgibson-portfolio.netlify.app/"
+                  target="_blank"
+                  >About</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#blog">Blog</a>
+                <a class="nav-link" href="#blog" target="_blank">Blog</a>
               </li>
             </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Desktop Navigation Bar -->
+      <nav
+        class="navbar navbar-expand-lg d-none fixed-top d-sm-block shadow-lg"
+        data-bs-theme="dark"
+        id="mainNav"
+      >
+        <div class="container-xxl">
+          <a
+            class="navbar-brand border-top border-bottom border-white d-flex align-items-center"
+            href="/index.html"
+          >
+            <img src="/img/JG Logo White.svg" class="img-fluid brandImaging" />
+            <span id="appName"> Bingo Bango</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+            id="desktopNavToggler"
+          >
+            <span class="navbar-toggler-jg">
+              <i class="bi bi-list"></i>
+            </span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+                id="desktopNavClose"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/app.html">The App</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/code.html"
+                    >The Code</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="https://github.com/GI-Jamal/CrucibleTacoCat"
+                    target="_blank"
+                    >The Repo</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="https://jamalgibson-portfolio.netlify.app/"
+                    target="_blank"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#blog" target="_blank">Blog</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
     </header>
 
     <!-- Main Content -->
-    <main class="container-xxl mt-3">
-      <h1 class="border-bottom border-2 border-dark">The Code</h1>
+    <main class="container-xxl mainMargins">
+      <h1 class="border-bottom border-2 border-success titleText">The Code</h1>
       <div class="row">
         <div class="col-lg-8 col-12">
           <pre class="line-numbers">
-                    <code class="language-js">
+            <code class="language-js">
 function getValues() {
-  let fizzValue = parseFloat(document.getElementById("fizz").value);
-  let buzzValue = parseFloat(document.getElementById("buzz").value);
+  let bingoValue = parseInt(document.getElementById("bingo").value);
+  let bangoValue = parseInt(document.getElementById("bango").value);
   let stopValue = parseInt(document.getElementById("stopNumber").value);
 
-  if (isNaN(fizzValue) || isNaN(buzzValue) || isNaN(stopValue)) {
+  if (
+    isNaN(bingoValue) ||
+    isNaN(bangoValue) ||
+    isNaN(stopValue) ||
+    stopValue > 5000
+  ) {
     Swal.fire({
       icon: "error",
       title: "Oops!",
-      text: "Please enter valid fizz, buzz, and stop values.",
-      heightAuto: false
+      text: "Please enter valid bingo, bango, and stop values.",
+      heightAuto: false,
     });
   } else {
-    let fbArray = generateFizzBuzz(stopValue);
-    displayFizzBuzz(fizzValue, buzzValue, fbArray);
+    let fbArray = generateBingoBango(stopValue);
+    displayBingoBango(bingoValue, bangoValue, fbArray);
   }
 }
 
-function generateFizzBuzz(stopNum) {
+function generateBingoBango(stopNum) {
   let numArray = [];
 
   for (i = 1; i <= stopNum; i++) {
@@ -138,32 +237,57 @@ function generateFizzBuzz(stopNum) {
   return numArray;
 }
 
-function displayFizzBuzz(fizz, buzz, numberArray) {
+function displayBingoBango(bingo, bango, numberArray) {
   let results = "";
 
-  for (i = 0; i < numberArray.length; i++) {
-    if (numberArray[i] % fizz == 0 && numberArray[i] % buzz == 0) {
-      results += `&lt;div class="col border py-3 bg-warning">FizzBuzz&lt;/div>`;
-    } else if (numberArray[i] % fizz == 0) {
-      results += `&lt;div class="col border py-3 bg-secondary">Fizz&lt;/div>`;
-    } else if (numberArray[i] % buzz == 0) {
-      results += `&lt;div class="col border py-3 bg-info">Buzz&lt;/div>`;
+  for (i = 0; i &lt; numberArray.length; i++) {
+    if (numberArray[i] % bingo == 0 && numberArray[i] % bango == 0) {
+      results += `&lt;div class="col-12 border py-3 bg-warning">BingoBango&lt;/div>`;
+    } else if (numberArray[i] % bingo == 0) {
+      results += `&lt;div class="col-12 border py-3 bg-secondary">Bingo&lt;/div>`;
+    } else if (numberArray[i] % bango == 0) {
+      results += `&lt;div class="col-12 border py-3 bg-info">Bango&lt;/div>`;
     } else {
-      results += `&lt;div class="col border py-3">${numberArray[i]}&lt;/div>`;
+      results += `&lt;div class="col-12 border py-3">${numberArray[i]}&lt;/div>`;
     }
   }
 
   let body = document.getElementById("fbTable");
   body.innerHTML = results;
 }
-
-                    </code>
-                </pre>
+            </code>
+          </pre>
         </div>
-        <div class="col-lg-4 col-12">
-          <p>The code is structured in one function</p>
-          <h5>displaMessage</h5>
-          <p>print out the message</p>
+        <div class="col-lg-4 col-12 mt-2">
+          <p>The code is structured in three functions:</p>
+          <hr />
+          <h5>getValues():</h5>
+          <p>
+            This function is used to retrieve values from three different input
+            fields in an HTML document. It checks if the values are valid and if
+            the stop value is less than or equal to 5000. If the values are
+            valid, it calls the generateBingoBango() function and passes it the
+            stop value. It then calls the displayBingoBango() function and
+            passes it the retrieved bingo and bango values, and the array of
+            numbers generated by the generateBingoBango() function.
+          </p>
+          <hr />
+          <h5>generateBingoBango():</h5>
+          <p>
+            This function generates an array of numbers starting from 1 to the
+            stopNum parameter that is passed to it.
+          </p>
+          <hr />
+          <h5>displayBingoBango():</h5>
+          <p>
+            This function generates a string of HTML code that displays the
+            numbers in the numberArray array, replacing numbers that are
+            multiples of the bingo value with the word "Bingo," multiples of the
+            bango value with the word "Bango," and multiples of both bingo and
+            bango values with the word "BingoBango." It then inserts this HTML
+            code into an element in the HTML document with the id fbTable.
+          </p>
+          <hr />
         </div>
       </div>
     </main>
@@ -172,25 +296,22 @@ function displayFizzBuzz(fizz, buzz, numberArray) {
     <footer>
       <div class="container-xxl">
         <div
-          class="footer-main py-3 row row-cols-1 row-cols-md-3 align-items-center text-center gy-3"
+          class="footer-main py-3 row row-cols-1 row-cols-md-3 align-items-center text-center gy-3 gy-md-0"
         >
           <div class="col">
-            <img src="/img/Jamal Name Logo White.png" height="50" />
-            <!-- TODO: change image height and image -->
+            <img
+              src="/img/Jamal Name Logo White.png"
+              class="img-fluid brandImaging"
+            />
           </div>
-          <div class="col text-md-end">
-            <!-- TODO: change social media links -->
-            <a href="https://linkedin.com/my-profile"
+          <div class="col text-md-end order-first order-md-last">
+            <a
+              href="https://www.linkedin.com/in/jamal-gibson-3b7bb9140/"
+              target="_blank"
               ><i class="socialicons bi bi-linkedin p-2"></i
             ></a>
-            <a href="https://github.com/my-profile"
+            <a href="https://github.com/GI-Jamal" target="_blank"
               ><i class="socialicons bi bi-github p-2"></i
-            ></a>
-            <a href="https://twitter.com/my-profile"
-              ><i class="socialicons bi bi-twitter p-2"></i
-            ></a>
-            <a href="https://youtube.com/my-profile"
-              ><i class="socialicons bi bi-youtube p-2"></i
             ></a>
           </div>
           <div class="col text-light order-md-first text-md-start">
@@ -207,6 +328,10 @@ function displayFizzBuzz(fizz, buzz, numberArray) {
       crossorigin="anonymous"
     ></script>
 
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script></script>
+
     <!-- Prism JS -->
     <script src="/js/prism.js"></script>
     <script>
@@ -217,5 +342,9 @@ function displayFizzBuzz(fizz, buzz, numberArray) {
         "right-trim": true,
       });
     </script>
+
+    <!-- Custom JS -->
+    <script src="/js/site.js"></script>
+    <script></script>
   </body>
 </html>

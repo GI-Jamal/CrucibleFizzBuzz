@@ -1,22 +1,34 @@
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
+
 function getValues() {
-  let fizzValue = parseInt(document.getElementById("fizz").value);
-  let buzzValue = parseInt(document.getElementById("buzz").value);
+  let bingoValue = parseInt(document.getElementById("bingo").value);
+  let bangoValue = parseInt(document.getElementById("bango").value);
   let stopValue = parseInt(document.getElementById("stopNumber").value);
 
-  if (isNaN(fizzValue) || isNaN(buzzValue) || isNaN(stopValue) || stopValue > 5000) {
+  if (
+    isNaN(bingoValue) ||
+    isNaN(bangoValue) ||
+    isNaN(stopValue) ||
+    stopValue > 5000
+  ) {
     Swal.fire({
       icon: "error",
       title: "Oops!",
-      text: "Please enter valid fizz, buzz, and stop values.",
-      heightAuto: false
+      text: "Please enter valid bingo, bango, and stop values.",
+      heightAuto: false,
     });
   } else {
-    let fbArray = generateFizzBuzz(stopValue);
-    displayFizzBuzz(fizzValue, buzzValue, fbArray);
+    let fbArray = generateBingoBango(stopValue);
+    displayBingoBango(bingoValue, bangoValue, fbArray);
   }
 }
 
-function generateFizzBuzz(stopNum) {
+function generateBingoBango(stopNum) {
   let numArray = [];
 
   for (i = 1; i <= stopNum; i++) {
@@ -26,16 +38,16 @@ function generateFizzBuzz(stopNum) {
   return numArray;
 }
 
-function displayFizzBuzz(fizz, buzz, numberArray) {
+function displayBingoBango(bingo, bango, numberArray) {
   let results = "";
 
   for (i = 0; i < numberArray.length; i++) {
-    if (numberArray[i] % fizz == 0 && numberArray[i] % buzz == 0) {
-      results += `<div class="col-12 border py-3 bg-warning">FizzBuzz</div>`;
-    } else if (numberArray[i] % fizz == 0) {
-      results += `<div class="col-12 border py-3 bg-secondary">Fizz</div>`;
-    } else if (numberArray[i] % buzz == 0) {
-      results += `<div class="col-12 border py-3 bg-info">Buzz</div>`;
+    if (numberArray[i] % bingo == 0 && numberArray[i] % bango == 0) {
+      results += `<div class="col-12 border py-3 bg-warning">BingoBango</div>`;
+    } else if (numberArray[i] % bingo == 0) {
+      results += `<div class="col-12 border py-3 bg-secondary">Bingo</div>`;
+    } else if (numberArray[i] % bango == 0) {
+      results += `<div class="col-12 border py-3 bg-info">Bango</div>`;
     } else {
       results += `<div class="col-12 border py-3">${numberArray[i]}</div>`;
     }
