@@ -43,7 +43,7 @@ function displayBingoBango(bingo, bango, numberArray) {
 
   for (i = 0; i < numberArray.length; i++) {
     if (numberArray[i] % bingo == 0 && numberArray[i] % bango == 0) {
-      results += `<div class="col-12 border py-3 bg-warning">BingoBango</div>`;
+      results += `<div class="col-12 border py-3 bg-warning">Bingo Bango</div>`;
     } else if (numberArray[i] % bingo == 0) {
       results += `<div class="col-12 border py-3 bg-secondary">Bingo</div>`;
     } else if (numberArray[i] % bango == 0) {

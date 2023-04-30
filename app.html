@@ -109,21 +109,31 @@
     <!-- Main Content -->
     <main class="container-xxl mainMargins">
       <div class="mt-3">
-        <h1 class="ms-2">Bingo Bango</h1>
+        <h1 class="ms-2 border-bottom border-2 border-success titleText">
+          Bingo Bango
+        </h1>
         <form class="mx-2">
+          <div class="row my-3">
+            <h4 class="lead">
+              Bingo Bango is a Fizz Buzz like JavaScript application. Input a
+              Bingo (Fizz) value and a Bango (Buzz) value to check a range of
+              numbers and see if those inputs are factors of any of the numbers
+              in that range. The range starts at 1 and ends at the number input
+              as the stop value.
+            </h4>
+          </div>
           <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 gy-2">
             <div class="col">
-              <label class="form-label">Bingo Value</label>
+              <label class="form-label">Bingo Value:</label>
               <input
                 type="number"
                 class="form-control"
                 placeholder="0"
-                value="3"
                 id="bingo"
               />
             </div>
             <div class="col">
-              <label class="form-label">Bango Value</label>
+              <label class="form-label">Bango Value:</label>
               <input
                 type="number"
                 class="form-control"
@@ -132,7 +142,7 @@
               />
             </div>
             <div class="col">
-              <label class="form-label">Stop Value (max: 5000)</label>
+              <label class="form-label">Stop Value (max: 5000):</label>
               <input
                 type="number"
                 class="form-control"
